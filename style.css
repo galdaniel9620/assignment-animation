@@ -1,0 +1,111 @@
+#background {
+    height: 100vh;
+    background-color: #050210;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#glow-circle {
+    height: 500px;
+    width: 500px;
+    margin: auto;
+    border-radius: 100%;
+    background:linear-gradient(to right,#fb5dad, #55fb9f, #b97aff);
+    filter: blur(50px);
+    animation: spin 1s infinite linear;
+
+}
+
+#color-circle {
+    height: 500px;
+    width: 500px;
+    border-radius: 100%;
+    background: linear-gradient(to right,#fb5dad, #55fb9f, #b97aff);
+    position: absolute;
+    animation: spin 1s infinite linear;
+}
+
+#black-circle{
+    width: 450px;
+    height: 450px;
+    border-radius: 100%;
+    background-color: #050210 ;
+    margin: auto;
+    transform: translateY(25px);
+}
+
+#main-circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    margin: auto;
+    transform: translateY(150px);
+    background-color: #130725;
+    animation: first-animation 1s infinite running;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+@keyframes first-animation {
+    0% {
+        transform:translateY(150px);;
+        width: 150px;
+        height: 150px;
+        background-color: #130725;
+        filter: contrast(85%);
+        }
+    
+    100% {
+        transform: rotate(0deg);
+        width: 450px;
+        height: 450px;
+        background-color: #130725;
+        filter: contrast(99%);
+        }
+}
+
+@media only screen and (max-width: 600px) {
+    #glow-circle{
+        height: 230px;
+        width: 230px; 
+    }
+
+    #color-circle {
+        height: 230px;
+        width: 230px;
+    }
+
+    #black-circle{
+        width: 190px;
+        height: 190px;
+        transform: translateY(20px);
+    }
+
+    #main-circle{
+        width: 100px;
+        height: 100px;
+        transform: translateY(45px);
+    }
+
+    @keyframes first-animation {
+        0% {
+            transform:translateY(45px);;
+            width: 100px;
+            height: 100px;
+            }
+        
+        100% {
+            transform: rotate(0deg);
+            width: 190px;
+            height: 190px;
+            }
+    }
+}
