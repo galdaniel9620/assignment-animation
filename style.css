@@ -1,3 +1,7 @@
+* {
+    margin: 0px;
+}
+
 #background {
     height: 100vh;
     background-color: #050210;
